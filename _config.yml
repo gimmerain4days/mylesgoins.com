@@ -1,0 +1,28 @@
+title: Myles Goins
+description: >-
+  Notes on engineering, AI, and books worth arguing with.
+url: "https://mylesgoins.com"
+author: Myles Goins
+timezone: America/Los_Angeles
+
+permalink: /:title/
+
+markdown: kramdown
+kramdown:
+  smart_quotes: ["lsquo", "rsquo", "ldquo", "rdquo"]
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+feed:
+  path: feed.xml
+
+# Excerpts: first paragraph of each post is used on the homepage list
+excerpt_separator: "\n\n"
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

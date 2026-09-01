@@ -1,0 +1,19 @@
+---
+layout: default
+title: Writing
+permalink: /writing/
+---
+<h1>Writing</h1>
+
+{% assign postsByYear = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+{% for year in postsByYear %}
+<p class="year-label">{{ year.name }}</p>
+<ul class="post-list">
+  {% for post in year.items %}
+  <li>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d" }}</time>
+  </li>
+  {% endfor %}
+</ul>
+{% endfor %}

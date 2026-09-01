@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<div class="intro">
+  <h1>Myles Goins</h1>
+  <p class="lede">I'm a civil engineer, dad, and husband.</p>
+  <p class="lede">This is a place where I'm hoping to share thoughts on technology, books, and the world.</p>
+  <p class="lede">But for now, it's a nice quiet place&hellip;</p>
+
+  {% include scene-a.html %}
+</div>
+
+<h2>Recent writing</h2>
+
+<ul class="post-list">
+  {% for post in site.posts limit: 7 %}
+  <li>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+  </li>
+  {% endfor %}
+</ul>
+
+<p class="more-link"><a href="{{ '/writing/' | relative_url }}">All writing &rarr;</a></p>
