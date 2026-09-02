@@ -25,8 +25,10 @@
     <header class="site">
       <a class="site-name" href="{{ '/' | relative_url }}">{{ site.title }}</a>
       <nav class="site-nav">
+        {% comment %} Nav links parked while the site is a one-pager — restore when Writing/About go live:
         <a href="{{ '/writing/' | relative_url }}" {% if page.url == '/writing/' %}aria-current="page"{% endif %}>Writing</a>
         <a href="{{ '/about/' | relative_url }}" {% if page.url == '/about/' %}aria-current="page"{% endif %}>About</a>
+        {% endcomment %}
         <button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
           <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
             <circle cx="12" cy="12" r="4"/>
