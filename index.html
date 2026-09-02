@@ -9,16 +9,3 @@ layout: default
 
   {% include scene-a.html %}
 </div>
-
-<h2>Recent writing</h2>
-
-<ul class="post-list">
-  {% for post in site.posts limit: 7 %}
-  <li>
-    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
-  </li>
-  {% endfor %}
-</ul>
-
-<p class="more-link"><a href="{{ '/writing/' | relative_url }}">All writing &rarr;</a></p>
